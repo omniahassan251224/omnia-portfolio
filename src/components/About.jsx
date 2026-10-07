@@ -23,13 +23,13 @@ function About() {
                 <div className="about-info">
                     <div className="about-stats">
                         <article className="stat-card"><strong>05</strong><span>Featured projects</span></article>
-                        <article className="stat-card"><strong>13+</strong><span>Tools & technologies</span></article>
-                        <article className="stat-card"><strong>03</strong><span>Training experiences</span></article>
+                        <article className="stat-card"><strong>50+</strong><span>Tools & technologies</span></article>
+                        <article className="stat-card"><strong>06</strong><span>Training experiences</span></article>
                     </div>
                     <div className="about-details">
                         <p><GraduationCap size={15} /><span>Computer Science, Cairo University</span></p>
                         <p><MapPin size={15} /><span>Cairo, Egypt</span></p>
-                        <p><Mail size={15} /><a href="mailto:omnia.hassan@example.com">omnia.hassan@example.com</a></p>
+                        <p><Mail size={15} /><a href="mailto:omniahassan251224@gmail.com">Omniahassan251224@gmail.com</a></p>
                     </div>
                 </div>
             </div>
