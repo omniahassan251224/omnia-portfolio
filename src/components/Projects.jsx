@@ -71,6 +71,7 @@ function Projects() {
   const [activeGallery, setActiveGallery] = useState(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const dialogRef = useRef(null);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -109,6 +110,13 @@ function Projects() {
       ? activeGallery.video.label
       : activeGallery.images[activeImageIndex].alt
     : "";
+
+  useEffect(() => {
+    if (!showingGalleryVideo || !videoRef.current) return;
+
+    videoRef.current.defaultPlaybackRate = 2;
+    videoRef.current.playbackRate = 2;
+  }, [showingGalleryVideo, activeGallery]);
 
   return (
     <section id="projects" className="section projects-section">
@@ -201,9 +209,11 @@ function Projects() {
               {showingGalleryVideo ? (
                 <video
                   key={activeGallery.video.src}
+                  ref={videoRef}
                   src={activeGallery.video.src}
                   controls
                   playsInline
+                  muted
                   preload="metadata"
                   aria-label={activeGallery.video.label}
                 />
